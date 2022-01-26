@@ -29,6 +29,8 @@ jobs:
           ${{ runner.os }}-php- 
     - name: chemin
       run: pwd
+    - name: ls
+      run: ls
     - name: Execute tests (Unit and Feature tests) via PHPUnit
       env:
         DATABASE_URL: sqlite:///%kernel.project_dir%/data/database.sqlite
