@@ -28,7 +28,7 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-php-     
     - name: build
-      run: app/composer validate
+      run: app/composer.json validate
     - name: Execute tests (Unit and Feature tests) via PHPUnit
       env:
         DATABASE_URL: sqlite:///%kernel.project_dir%/data/database.sqlite
