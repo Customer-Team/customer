@@ -35,9 +35,6 @@ jobs:
         mkdir -p data
         touch data/database.sqlite
       working-directory: app
-    - name: build
-      run: composer validate
-      working-directory: app
     - name: Execute tests (Unit and Feature tests) via PHPUnit
       env:
         DATABASE_URL: sqlite:///%kernel.project_dir%/data/database.sqlite
